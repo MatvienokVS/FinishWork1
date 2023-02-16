@@ -10,6 +10,7 @@ string[] array1 = new string[7] { "24", "Tony", "Huawey", "12", "No", "Yes", "Mo
 string[] array2 = new string[array1.Length];
 
 ResultArray(array1, array2);
+PrintArray(array1);
 PrintArray(array2);
 
 
@@ -31,12 +32,12 @@ void PrintArray(string[] array)
 {
 	Write("[");
 
-	for (int i = 0; i < array.Length - 1; i++)
+	for (int i = 0; i < array.Length; i++)
 	{
-		Write($"{array[i]}, ");
-	}
+		Write($"{array[i]},");
 
-	Write($"{array[array.Length - 1]}");
+	}
+	//Write($"{array[array.Length - 1]}");
 	Write("]");
 	WriteLine();
 }
