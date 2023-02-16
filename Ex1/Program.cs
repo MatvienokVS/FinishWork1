@@ -13,7 +13,6 @@ ResultArray(array1, array2);
 PrintArray(array1);
 PrintArray(array2);
 
-
 void ResultArray(string[] array1, string[] array2)
 {
 	int item = 0;
@@ -27,17 +26,20 @@ void ResultArray(string[] array1, string[] array2)
 	}
 }
 
-
 void PrintArray(string[] array)
 {
 	Write("[");
 
-	for (int i = 0; i < array.Length; i++)
+	for (int i = 0; i < array.Length - 1; i++)
 	{
-		Write($"{array[i]},");
-
+		if (array[i] != null)
+			Write($" '{array[i]}', ");
 	}
-	//Write($"{array[array.Length - 1]}");
+	Write($"{array[array.Length - 1]}");
 	Write("]");
 	WriteLine();
 }
+
+
+
+
